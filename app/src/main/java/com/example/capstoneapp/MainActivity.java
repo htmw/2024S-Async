@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.provider.MediaStore;
 import android.view.View;
 
-import androidx.camera.core.processing.SurfaceProcessorNode;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.WindowCompat;
