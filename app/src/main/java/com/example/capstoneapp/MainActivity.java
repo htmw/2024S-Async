@@ -40,12 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int ACTIVITY_REQUEST_CODE = 1000;
     private static final int PERMISSION_REQUEST_CODE = 2000;
     private ImageViewModel viewModel;
-    //private ImageView imageView;
-    // Declaring fragment manager from making data
-    // transactions using the custom fragment
-    //final androidx.fragment.app.FragmentManager fragmentManager = getSupportFragmentManager();
-    //final androidx.fragment.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-    //final SecondFragment secondFragment = new SecondFragment();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,13 +83,6 @@ public class MainActivity extends AppCompatActivity {
             Bitmap imageBitmap = (Bitmap) data.getExtras().get("data");
             viewModel.setImageView(imageBitmap);
             //imageView.setImageBitmap(imageBitmap);
-            //ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            //imageBitmap.compress(Bitmap.CompressFormat.PNG,200, stream);
-            //byte[] byteArray = stream.toByteArray();
-           // Bundle bundle = new Bundle();
-            //bundle.putByteArray("image", byteArray);
-            //secondFragment.setArguments(bundle);
-            //fragmentTransaction.add(R.id.SecondFragment, secondFragment).commit();
         }
     }
 

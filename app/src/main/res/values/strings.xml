@@ -8,4 +8,5 @@
     <string name="previous">Previous</string>
     <string name="titleFirstScreen">Take a Picture </string>
     <string name="command1">Please take a picture using the button</string>
+    <string name="opencv_camera">OpenCV Camera</string>
 </resources>
