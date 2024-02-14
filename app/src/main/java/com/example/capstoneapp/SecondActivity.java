@@ -13,6 +13,9 @@ import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.core.Mat;
 
+import java.util.Collections;
+import java.util.List;
+
 public class SecondActivity extends CameraActivity {
 
     //Variable to pass the cameraview id
@@ -44,8 +47,33 @@ public class SecondActivity extends CameraActivity {
             }
         });
         if(OpenCVLoader.initDebug()){
-            Log.d("Opencv:APP", "success...");
+            cameraBridgeViewBase.enableView();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        cameraBridgeViewBase.enableView();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        cameraBridgeViewBase.disableView();
+    }
+    //App is on the background
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        cameraBridgeViewBase.disableView();
+    }
+
+    @Override
+    protected List<? extends CameraBridgeViewBase> getCameraViewList() {
+        return Collections.singletonList(cameraBridgeViewBase);
     }
 
     void getPermission(){
