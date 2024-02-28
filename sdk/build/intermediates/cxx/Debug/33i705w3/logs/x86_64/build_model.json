@@ -143,7 +143,7 @@
         "rootBuildGradleFolder": "C:\\Users\\risae\\OneDrive\\Desktop\\CS691Project\\2024S-Async",
         "sdkFolder": "C:\\Users\\risae\\AppData\\Local\\Android\\Sdk",
         "isBuildOnlyTargetAbiEnabled": true,
-        "ideBuildTargetAbi": "x86_64,x86",
+        "ideBuildTargetAbi": "x86_64",
         "isCmakeBuildCohabitationEnabled": false,
         "isPrefabEnabled": false
       },
