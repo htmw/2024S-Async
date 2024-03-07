@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/sign_language_background1"
-    tools:context=".LoginActivity">
-
+    tools:context=".SignUpActivity">
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -17,7 +16,6 @@
         android:textColor="#FFFFFF"
         android:textSize="56sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -85,32 +83,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextUsername" />
-    <TextView
-        android:id="@+id/btnGoogle"
-        android:layout_width="310dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="164dp"
-        android:background="@drawable/rectangle"
-        android:gravity="center"
-        android:text="Sign in with Google"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
-        app:layout_constraintVertical_bias="0.5" />
+
 
     <Button
-        android:id="@+id/buttonSignIn"
+        android:id="@+id/buttonSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:backgroundTint="#7C0707"
-        android:text="@string/sign_in"
+        android:text="@string/sign_up"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
@@ -118,29 +99,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewPassword" />
 
     <TextView
-        android:id="@+id/tvSignUp"
+        android:id="@+id/textViewLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Not an user Sign Up here"
+        android:text="Login Here"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#FF0000"
         android:textSize="20sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="34dp"
-        android:layout_height="29dp"
-        android:layout_marginEnd="256dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnGoogle"
-        app:layout_constraintEnd_toEndOf="@+id/btnGoogle"
-        app:layout_constraintTop_toTopOf="@+id/btnGoogle"
-        app:layout_constraintVertical_bias="0.631"
-        app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
-
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
