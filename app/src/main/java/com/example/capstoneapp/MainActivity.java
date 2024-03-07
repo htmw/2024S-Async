@@ -29,6 +29,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import java.io.ByteArrayInputStream;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageViewModel viewModel;
 
     private FirebaseAuth mFirebaseAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
