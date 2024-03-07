@@ -40,24 +40,32 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 app:cardElevation="0dp"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                android:background="#f3f3f3">
+
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    >
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/imageView3"
-                        android:text="Button 1"
+                        android:layout_below="@+id/imageBtnCamera"
+                        android:text="CAMERA"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"/>
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/imageBtnCamera"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
                         android:layout_centerInParent="true"
-                        tools:src="@drawable/sharp_charger_24" />
+                        android:src="@drawable/camera1"/>
 
                 </RelativeLayout>
 
@@ -72,21 +80,28 @@
                 android:layout_margin="5dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    >
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/imageView4"
-                        android:text="Button 2"
+                        android:layout_below="@+id/imageBtnHowToGuide"
+                        android:text="How to Guide"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"/>
+
                     <ImageView
-                        android:id="@+id/imageView4"
+                        android:id="@+id/imageBtnHowToGuide"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
                         android:layout_centerInParent="true"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/guide" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -100,21 +115,28 @@
                 android:layout_margin="5dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    >
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/imageView5"
-                        android:text="Button 3"
+                        android:layout_below="@+id/imageBtnSetting"
+                        android:text="Settings"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"/>
+
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/imageBtnSetting"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
                         android:layout_centerInParent="true"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/setting" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -128,21 +150,28 @@
                 android:layout_margin="5dp">
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    >
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/imageView6"
-                        android:text="Button 4"
+                        android:layout_below="@+id/imageBtnLogOut"
+                        android:text="Log Out"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="normal"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"/>
+
                     <ImageView
-                        android:id="@+id/imageView6"
+                        android:id="@+id/imageBtnLogOut"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
                         android:layout_centerInParent="true"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/logout2" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>

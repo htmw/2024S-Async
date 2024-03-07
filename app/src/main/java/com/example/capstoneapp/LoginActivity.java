@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,15 +28,27 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
+    EditText etEmail;
+    EditText etPassword;
+    Button btnSignIn;
+    TextView tvSignUpHere;
 
     private TextView btnGoogle;
     private GoogleSignInClient client;
 
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         btnGoogle = findViewById(R.id.btnGoogle);
+        etEmail = findViewById(R.id.editTextUsername);
+        etPassword = findViewById(R.id.editTextPassword);
+        tvSignUpHere = findViewById(R.id.tvSignUp);
+        btnSignIn = findViewById(R.id.buttonSignIn);
+
+        mAuth= FirebaseAuth.getInstance();
+
         GoogleSignInOptions options = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -48,6 +63,37 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+
+        btnSignIn.setOnClickListener(view -> {
+            loginUser();
+        });
+
+        tvSignUpHere.setOnClickListener(view -> {
+            startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+        });
+    }
+    private void loginUser(){
+        String email = etEmail.getText().toString();
+        String password = etPassword.getText().toString();
+        if(TextUtils.isEmpty(email)){
+            etEmail.setError("Email cannot be empty");
+            etEmail.requestFocus();
+        } else if (TextUtils.isEmpty(password)) {
+            etPassword.setError("Password cannot be empty");
+            etPassword.requestFocus();
+        }else{
+            mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if(task.isSuccessful()){
+                        Toast.makeText(LoginActivity.this, "User Logged in succesfully", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    }else {
+                        Toast.makeText(LoginActivity.this, "Registration Error" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
     }
 
     @Override
@@ -63,11 +109,11 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(LoginActivity.this, "conecction is successful", Toast.LENGTH_LONG);
+                                    Toast.makeText(LoginActivity.this, "User Logged in succesfully", Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                 }else{
-                                    Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT);
+                                    Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });

@@ -25,9 +25,11 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.capstoneapp.databinding.ActivityMainBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import java.io.ByteArrayInputStream;
@@ -40,12 +42,10 @@ public class MainActivity extends AppCompatActivity {
     private static final int ACTIVITY_REQUEST_CODE = 1000;
     private static final int PERMISSION_REQUEST_CODE = 2000;
     private ImageViewModel viewModel;
-    //private ImageView imageView;
-    // Declaring fragment manager from making data
-    // transactions using the custom fragment
-    //final androidx.fragment.app.FragmentManager fragmentManager = getSupportFragmentManager();
-    //final androidx.fragment.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-    //final SecondFragment secondFragment = new SecondFragment();
+
+    private FirebaseAuth mFirebaseAuth;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,14 +87,6 @@ public class MainActivity extends AppCompatActivity {
             //get the captured image as bitmap
             Bitmap imageBitmap = (Bitmap) data.getExtras().get("data");
             viewModel.setImageView(imageBitmap);
-            //imageView.setImageBitmap(imageBitmap);
-            //ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            //imageBitmap.compress(Bitmap.CompressFormat.PNG,200, stream);
-            //byte[] byteArray = stream.toByteArray();
-           // Bundle bundle = new Bundle();
-            //bundle.putByteArray("image", byteArray);
-            //secondFragment.setArguments(bundle);
-            //fragmentTransaction.add(R.id.SecondFragment, secondFragment).commit();
         }
     }
 
@@ -117,6 +109,11 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+        if(id == R.id.action_logout){
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
