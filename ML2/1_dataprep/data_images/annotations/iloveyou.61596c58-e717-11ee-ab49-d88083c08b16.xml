@@ -1,0 +1,26 @@
+<annotation>
+	<folder>data_images</folder>
+	<filename>iloveyou.61596c58-e717-11ee-ab49-d88083c08b16.jpg</filename>
+	<path>I:\Study\CS691\ML2\1_dataprep\data_images\iloveyou.61596c58-e717-11ee-ab49-d88083c08b16.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>I Love You</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>392</xmin>
+			<ymin>87</ymin>
+			<xmax>584</xmax>
+			<ymax>289</ymax>
+		</bndbox>
+	</object>
+</annotation>
