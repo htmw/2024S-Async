@@ -1,0 +1,26 @@
+<annotation>
+	<folder>data_images</folder>
+	<filename>no.4711bba9-e717-11ee-be4e-d88083c08b16c.jpg</filename>
+	<path>I:\Study\CS691\ML2\1_dataprep\data_images\no.4711bba9-e717-11ee-be4e-d88083c08b16c.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>No</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>135</xmin>
+			<ymin>92</ymin>
+			<xmax>283</xmax>
+			<ymax>249</ymax>
+		</bndbox>
+	</object>
+</annotation>
