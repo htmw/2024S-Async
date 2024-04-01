@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f3f3f3"
+    android:background="@drawable/homescreen_background"
     tools:context=".FirstFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#f3f3f3"
         android:padding="16dp">
 
         <Button
@@ -60,12 +59,13 @@
                         android:textStyle="normal"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"/>
+
                     <ImageView
                         android:id="@+id/imageBtnCamera"
                         android:layout_width="130dp"
                         android:layout_height="130dp"
                         android:layout_centerInParent="true"
-                        android:src="@drawable/camera1"/>
+                        android:src="@drawable/camera1" />
 
                 </RelativeLayout>
 
