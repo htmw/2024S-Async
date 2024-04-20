@@ -1,14 +1,11 @@
 package com.example.capstoneapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
-import android.Manifest;
 
-import org.opencv.android.CameraActivity;
+import androidx.annotation.NonNull;
+
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.core.Core;
