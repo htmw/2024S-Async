@@ -22,6 +22,7 @@ import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import com.example.capstoneapp.ml.BestFp16
 import org.tensorflow.lite.DataType
+import org.tensorflow.lite.support.common.FileUtil
 import org.tensorflow.lite.support.image.ImageProcessor
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.image.ops.ResizeOp
@@ -30,6 +31,7 @@ import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 
 class CameraActivity : AppCompatActivity() {
 
+    lateinit var labels: List<String>
     lateinit var cameraManager: CameraManager
     lateinit var textureView: TextureView
     lateinit var handler: Handler
@@ -48,7 +50,7 @@ class CameraActivity : AppCompatActivity() {
 
         get_permission()
 
-
+        //labels = FileUtil.loadLabels(this,customclasses.txt)
         model = BestFp16.newInstance(this)
         val handlerThread = HandlerThread("videoThread")
         handlerThread.start()
@@ -85,13 +87,13 @@ class CameraActivity : AppCompatActivity() {
                 val outputs = model.process(inputFeature0)
                 //val outputs = model.process(image)
                 val outputFeature0 = outputs.outputFeature0AsTensorBuffer
-                val locations = outputs.locationsAsTensorBuffer.floatArray
+                //val locations = outputs.locationsAsTensorBuffer.floatArray
 
                 var mutable = bitmap.copy(Bitmap.Config.ARGB_8888, true)
                 val canvas = Canvas(mutable)
 // Releases model resources if no longer used.
 
-                val h = mutable.height
+                /*val h = mutable.height
                 val w = mutable.width
 
                 paint.textSize = h/15f
@@ -108,7 +110,8 @@ class CameraActivity : AppCompatActivity() {
                         canvas.drawText(customclasses.get(classes.get(index).toInt())+ " " + fl.toString(), locations.get(x+1)*w, locations.get(x)*h,paint)
 
                     }
-                }
+                }*/
+                imageView.setImageBitmap(mutable)
 
             }
 
