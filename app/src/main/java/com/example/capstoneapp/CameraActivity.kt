@@ -50,7 +50,7 @@ class CameraActivity : AppCompatActivity() {
 
         get_permission()
 
-        //labels = FileUtil.loadLabels(this,customclasses.txt)
+        //labels = FileUtil.loadLabels(this, customclasses.txt)
         model = BestFp16.newInstance(this)
         val handlerThread = HandlerThread("videoThread")
         handlerThread.start()
