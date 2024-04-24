@@ -1,7 +1,7 @@
 package com.example.capstoneapp.tflite;
 
 
-import static org.tensorflow.lite.examples.detection.env.Utils.expit;
+import static com.example.capstoneapp.env.Utils.expit;
 
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -10,11 +10,11 @@ import android.os.Build;
 import android.util.Log;
 
 import com.example.capstoneapp.MainActivity;
+import com.example.capstoneapp.env.Logger;
+import com.example.capstoneapp.env.Utils;
 
 import org.tensorflow.lite.Interpreter;
 import org.tensorflow.lite.Tensor;
-import com.example.capstoneapp.env.Logger;
-import com.example.capstoneapp.env.Utils;
 import org.tensorflow.lite.gpu.GpuDelegate;
 import org.tensorflow.lite.nnapi.NnApiDelegate;
 
@@ -173,7 +173,7 @@ public class YoloV5ClassifierDetect implements Classifier {
     }
 
     public void setNumThreads(int num_threads) {
-        if (tfLite != null) tfLite.setNumThreads(num_threads);
+        if (tfLite != null) tfLite.equals(num_threads);
     }
 
     @Override

@@ -7,17 +7,6 @@
     tools:context=".SecondActivity">
 
 
-    <org.opencv.android.JavaCameraView
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="0dp"
-        android:id="@+id/cameraView"/>
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"

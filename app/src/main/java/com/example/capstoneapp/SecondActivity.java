@@ -1,24 +1,6 @@
 package com.example.capstoneapp;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-
-import org.opencv.android.CameraBridgeViewBase;
-import org.opencv.android.OpenCVLoader;
-import org.opencv.core.Core;
-import org.opencv.core.Mat;
-import org.opencv.core.MatOfPoint;
-import org.opencv.core.Rect;
-import org.opencv.core.Scalar;
-import org.opencv.imgproc.Imgproc;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
+/*
 public class SecondActivity extends CameraActivity {
 
     //Variable to pass the cameraview id
@@ -127,3 +109,4 @@ public class SecondActivity extends CameraActivity {
         }
     }
 }
+*/
