@@ -1,17 +1,20 @@
 package com.example.capstoneapp.tflite;
 
 
+import static org.tensorflow.lite.examples.detection.env.Utils.expit;
+
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.RectF;
 import android.os.Build;
 import android.util.Log;
 
+import com.example.capstoneapp.MainActivity;
+
 import org.tensorflow.lite.Interpreter;
 import org.tensorflow.lite.Tensor;
-import org.tensorflow.lite.examples.detection.MainActivity;
-import org.tensorflow.lite.examples.detection.env.Logger;
-import org.tensorflow.lite.examples.detection.env.Utils;
+import com.example.capstoneapp.env.Logger;
+import com.example.capstoneapp.env.Utils;
 import org.tensorflow.lite.gpu.GpuDelegate;
 import org.tensorflow.lite.nnapi.NnApiDelegate;
 
@@ -28,8 +31,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Vector;
-
-import static org.tensorflow.lite.examples.detection.env.Utils.expit;
 
 
 /**

@@ -1,8 +1,9 @@
 package com.example.capstoneapp.customview;
 
 
+import com.example.capstoneapp.tflite.Classifier.Recognition;
+
 import java.util.List;
-//import org.tensorflow.lite.examples.detection.tflite.Classifier.Recognition;
 
 public interface ResultsView {
     public void setResults(final List<Recognition> results);
