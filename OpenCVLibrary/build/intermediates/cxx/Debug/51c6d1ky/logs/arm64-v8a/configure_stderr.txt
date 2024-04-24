@@ -9,10 +9,10 @@ CMake Error at C:/Users/risae/AppData/Local/Android/Sdk/cmake/3.22.1/share/cmake
 
     Change Dir: C:/Users/risae/OneDrive/Desktop/CS691Project/2024S-Async/OpenCVLibrary/.cxx/Debug/51c6d1ky/arm64-v8a/CMakeFiles/CMakeTmp
     
-    Run Build Command(s):C:\Users\risae\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_33290 && [1/2] Building CXX object CMakeFiles/cmTC_33290.dir/testCXXCompiler.cxx.o
-    [2/2] Linking CXX executable cmTC_33290
-    FAILED: cmTC_33290 
-    cmd.exe /C "cd . && C:\Users\risae\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/risae/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_33290.dir/testCXXCompiler.cxx.o -o cmTC_33290  -latomic -lm && cd ."
+    Run Build Command(s):C:\Users\risae\AppData\Local\Android\Sdk\cmake\3.22.1\bin\ninja.exe cmTC_6e1bf && [1/2] Building CXX object CMakeFiles/cmTC_6e1bf.dir/testCXXCompiler.cxx.o
+    [2/2] Linking CXX executable cmTC_6e1bf
+    FAILED: cmTC_6e1bf 
+    cmd.exe /C "cd . && C:\Users\risae\AppData\Local\Android\Sdk\ndk\25.1.8937393\toolchains\llvm\prebuilt\windows-x86_64\bin\clang++.exe --target=aarch64-none-linux-android21 --sysroot=C:/Users/risae/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--gc-sections -Wl,--no-undefined -Qunused-arguments -Wl,--gc-sections CMakeFiles/cmTC_6e1bf.dir/testCXXCompiler.cxx.o -o cmTC_6e1bf  -latomic -lm && cd ."
     ld: error: unable to find library -lc++_shared
     clang++: error: linker command failed with exit code 1 (use -v to see invocation)
     ninja: build stopped: subcommand failed.
