@@ -61,7 +61,7 @@ public class Utils {
 //        try {
 //            istr = assetManager.open(filePath);
 //            bitmap = BitmapFactory.decodeStream(istr);
-//            bitmap = Bitmap.createScaledBitmap(bitmap, MainActivity.TF_OD_API_INPUT_SIZE, MainActivity.TF_OD_API_INPUT_SIZE, false);
+//            bitmap = Bitmap.createScaledBitmap(bitmap, MenuActivity.TF_OD_API_INPUT_SIZE, MenuActivity.TF_OD_API_INPUT_SIZE, false);
 //        } catch (IOException e) {
 //            // handle exception
 //            Log.e("getBitmapFromAsset", "getBitmapFromAsset: " + e.getMessage());
