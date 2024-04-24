@@ -1,8 +1,6 @@
 package com.example.capstoneapp;
 
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
@@ -19,13 +17,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import org.tensorflow.lite.examples.detection.customview.OverlayView;
-import org.tensorflow.lite.examples.detection.env.ImageUtils;
-import org.tensorflow.lite.examples.detection.env.Logger;
-import org.tensorflow.lite.examples.detection.env.Utils;
-import org.tensorflow.lite.examples.detection.tflite.Classifier;
-import org.tensorflow.lite.examples.detection.tflite.YoloV5Classifier;
-import org.tensorflow.lite.examples.detection.tracking.MultiBoxTracker;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.capstoneapp.customview.OverlayView;
+import com.example.capstoneapp.env.ImageUtils;
+import com.example.capstoneapp.env.Logger;
+import com.example.capstoneapp.env.Utils;
+import com.example.capstoneapp.tflite.Classifier;
+import com.example.capstoneapp.tflite.YoloV5Classifier;
+import com.example.capstoneapp.tracking.MultiBoxTracker;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -44,7 +44,7 @@ public class ThirdActivity extends AppCompatActivity {
         detectButton = findViewById(R.id.detectButton);
         imageView = findViewById(R.id.imageView);
 
-        cameraButton.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, DetectorActivity.class)));
+        cameraButton.setOnClickListener(v -> startActivity(new Intent(ThirdActivity.this, DetectorActivity.class)));
 
         detectButton.setOnClickListener(v -> {
             Handler handler = new Handler();
@@ -60,7 +60,7 @@ public class ThirdActivity extends AppCompatActivity {
             }).start();
 
         });
-        this.sourceBitmap = Utils.getBitmapFromAsset(MainActivity.this, "kite.jpg");
+        this.sourceBitmap = Utils.getBitmapFromAsset(ThirdActivity.this, "kite.jpg");
 
         this.cropBitmap = Utils.processBitmap(sourceBitmap, TF_OD_API_INPUT_SIZE);
 

@@ -20,16 +20,16 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+import com.example.capstoneapp.customview.OverlayView;
+import com.example.capstoneapp.customview.OverlayView.DrawCallback;
+import com.example.capstoneapp.env.ImageUtils;
+import com.example.capstoneapp.env.Logger;
+import com.example.capstoneapp.env.BorderedText;
+import com.example.capstoneapp.tflite.Classifier;
+import com.example.capstoneapp.tflite.YoloV5Classifier;
+import com.example.capstoneapp.tracking.MultiBoxTracker;
+import com.example.capstoneapp.tflite.DetectorFactory;
 
-import org.tensorflow.lite.examples.detection.customview.OverlayView;
-import org.tensorflow.lite.examples.detection.customview.OverlayView.DrawCallback;
-import org.tensorflow.lite.examples.detection.env.BorderedText;
-import org.tensorflow.lite.examples.detection.env.ImageUtils;
-import org.tensorflow.lite.examples.detection.env.Logger;
-import org.tensorflow.lite.examples.detection.tflite.Classifier;
-import org.tensorflow.lite.examples.detection.tflite.DetectorFactory;
-import org.tensorflow.lite.examples.detection.tflite.YoloV5Classifier;
-import org.tensorflow.lite.examples.detection.tracking.MultiBoxTracker;
 
 /**
  * An activity that uses a TensorFlowMultiBoxDetector and ObjectTracker to detect and then track
