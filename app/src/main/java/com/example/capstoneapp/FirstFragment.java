@@ -45,7 +45,7 @@ public class FirstFragment extends Fragment {
             startActivity(intent);
         });
         btnCamera.setOnClickListener(view -> {
-            Intent intent = new Intent(this.getContext(), MainActivity.class);
+            Intent intent = new Intent(this.getContext(), DetectorActivity.class);
             startActivity(intent);
         });
 
