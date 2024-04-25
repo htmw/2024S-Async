@@ -1,23 +1,13 @@
 package com.example.capstoneapp;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
@@ -52,6 +42,10 @@ public class FirstFragment extends Fragment {
         btnLogOut.setOnClickListener(view -> {
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(this.getContext(), LoginActivity.class);
+            startActivity(intent);
+        });
+        btnCamera.setOnClickListener(view -> {
+            Intent intent = new Intent(this.getContext(), MainActivity.class);
             startActivity(intent);
         });
 
