@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CapstoneApp</string>
+    <string name="app_name">SignIt</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">SignIt</string>
