@@ -25,6 +25,7 @@ public class FirstFragment extends Fragment {
     private ImageViewModel viewModel;
     ImageView btnCamera;
     ImageView btnLogOut;
+    ImageView btnHowToGuide;
 
     @Override
     public View onCreateView(
@@ -35,10 +36,9 @@ public class FirstFragment extends Fragment {
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         btnCamera = binding.imageBtnCamera;
         btnLogOut = binding.imageBtnLogOut;
+        btnHowToGuide = binding.imageBtnHowToGuide;
         viewModel = new ViewModelProvider(this).get(ImageViewModel.class);
-        btnCamera.setOnClickListener(view -> {
 
-        });
         btnLogOut.setOnClickListener(view -> {
             FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(this.getContext(), LoginActivity.class);
@@ -57,7 +57,7 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
+        binding.imageBtnHowToGuide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
