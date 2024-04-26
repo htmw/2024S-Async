@@ -1,17 +1,23 @@
 How To Use SignIT?
+
 Hello and welcome to SignIt! SignIt’s real-time sign language recognition tool is not only accurate but also very easy to use! Here is a quick guide on how you can use SignIt for your everyday conversation:
+
 1) Navigate to the Camera
+
 •	Once signed in, you will be prompted to the home screen where you can navigate to the camera button.
 •	When using the camera, you will be shown the label for the gesture in addition to the percentages, which indicate how accurate your hand gesture recognition is.
 •	The percentages demonstrate the accuracy of your hand gestures and can range somewhere between 41%-100%.
 •	Any percentage below 40% will not be displayed, meaning your hand gestures weren’t recognized.
 •	This can easily be adjusted by making sure your hand gestures are precise and placed within the camera’s frame.
+
 2) Preset Expressions
+
 There are some predefined expressions integrated within our machine learning model. These include:
 •	“Hello”
 •	“Yes”
 •	“No”
 •	“Thanks”
 •	“I Love You”
+
 3) Start Signing!
 You are all set! You may now use the camera feature to identify sign language. Make sure your hands are positioned within the camera’s frame for more accuracy. Enjoy singing!
