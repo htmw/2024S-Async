@@ -1,25 +1,26 @@
 package com.example.capstoneapp;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.capstoneapp.databinding.FragmentSecondBinding;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
-    private ImageView imageTaken;
-    private ImageViewModel viewModel;
+    //private ImageView imageTaken;
+    //private ImageViewModel viewModel;
+    private TextView textView;
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -27,9 +28,24 @@ public class SecondFragment extends Fragment {
     ) {
 
         binding = FragmentSecondBinding.inflate(inflater, container, false);
-        imageTaken = binding.imageView2;
-        viewModel = new ViewModelProvider(requireActivity()).get(ImageViewModel.class);
-        imageTaken.setImageBitmap(viewModel.getImageView());
+        textView = binding.textviewSecond;
+        //imageTaken = binding.imageView2;
+        //viewModel = new ViewModelProvider(requireActivity()).get(ImageViewModel.class);
+        //imageTaken.setImageBitmap(viewModel.getImageView());
+        String str = "";
+        try {
+            InputStream inputStream = getContext().getAssets().open("howtoguide.txt");
+            int size = inputStream.available();
+            byte[] buffer = new byte[size];
+            inputStream.read(buffer);
+
+            str = new String(buffer);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        textView.setText(str);
+
         return binding.getRoot();
 
     }
