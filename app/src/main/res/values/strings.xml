@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">CapstoneApp</string>
+    <string name="app_name">SignIt</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Screen</string>
-    <string name="second_fragment_label">Second Screen</string>
+    <string name="first_fragment_label">SignIt</string>
+    <string name="second_fragment_label">How to Guide</string>
     <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="previous">Main Menu</string>
     <string name="titleFirstScreen">Take a Picture </string>
     <string name="command1">Please take a picture using the button</string>
     <string name="username">Username</string>
@@ -19,4 +19,5 @@
     <string name="first_time_user">First time here? Sign Up.</string>
     <string name="tfe_od_app_name" translation_description="Object Detection demo app [CHAR_LIMIT=40]">TFL Detect</string>
     <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+    <string name="about">About</string>
 </resources>
