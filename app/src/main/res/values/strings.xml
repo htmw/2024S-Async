@@ -2,7 +2,7 @@
     <string name="app_name">CapstoneApp</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Screen</string>
+    <string name="first_fragment_label">SignIt</string>
     <string name="second_fragment_label">Second Screen</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
